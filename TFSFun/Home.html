@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            margin: 0;
+            min-height: 100%;
+        }
+
+        @font-face {
+            font-family: "FontAwesome";
+            src: url(fontawesome.woff) format(woff);
+        }
+
+        .topnav {
+            font-size: 17px;
+            background-color: #0078d7;
+            color: #f1f1f1;
+            width: 100%;
+            padding: 0;
+            letter-spacing: 1px;
+        }
+
+        .topnav a {
+            background-color: 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+            padding: 10px 15px 9px 15px !important;
+            border-bottom: none;
+            display: inline-block;
+        }
+
+        .foot {
+            background-color: #0078d7;
+            color: #f1f1f1;
+            width: 100%;
+            height: 200px;
+            display: block;
+            float: left;
+            margin-top: 200px;
+            text-align:center;
+        }
+
+        .fa-home {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 22px;
+            width: 52px; 
+            color: white;
+        }
+
+        .fa-home::before{
+            content: "\f015";
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        .icon {
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+
+        #icon-bug {
+            color: red;
+        }
+
+        #icon-task {
+            color: #FF8800;
+        }
+
+        #icon-trophy {
+            color: gold;
+        }
+
+        #icon-bug::before {
+            content: "\f188  ";
+        }
+
+        #icon-task::before {
+            content: "\f0ae  "
+        }
+
+        #icon-trophy::before {
+            content: "\f091  "
+        }
+
+        caption {
+            text-align: left;
+            color: red;
+        }
+    </style>
+    <body>
+        <div class="topnav" style="position:fixed;top:0;">
+            <div>
+                <div style="float:left;overflow:hidden;height:44px;">
+                    <a class="fa-home" href="" title="Home"></a>
+                </div>
+                <div style="float:right;width:30%;overflow:hidden;height:44px;">
+                    <a style="float:right">Hello, Robin</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id="wrap" style="float:left;margin-top: 35px;">
+                <div id="toplist-iteration" style="margin:35px;">
+                    <div style="float:left;width:100%;">
+                        <div style="float:left;background:#0078d7;padding:10px;transform:skewX(-18deg);color:white;">ITERATION</div>
+                        <div style="float:left;padding:10px 0 10px 10px;font-weight:bold;">1709</div>
+                        <div style="float:left;padding:10px 0 10px 10px;">1708</div>
+                        <div style="border-top:solid #0078d7 1px; margin-top:-1px; float:left;width:100%;"></div>
+                    </div>
+                    <div style="float:left;width:100%;margin-top:5px;">
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-bug" class="icon">Bug</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>P1</td>
+                                        <td>P2</td>
+                                        <td>P3</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-task" class="icon">Task</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>Count</td>
+                                        <td>Hours</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-trophy" class="icon">Trophy</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>Count</td>
+                                        <td>Points</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="toplist-iteration" style="margin:35px;">
+                    <div style="float:left;width:100%;margin-top:20px;">
+                        <div style="float:left;background:#0078d7;padding:10px;transform:skewX(-18deg);color:white;">Overall</div>
+                        <div style="border-top:solid #0078d7 1px; margin-top:-1px; float:left;width:100%;"></div>
+                    </div>
+                    <div style="float:left;width:100%;margin-top:5px;">
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-bug" class="icon">Bug</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>P1</td>
+                                        <td>P2</td>
+                                        <td>P3</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Robin Zhu</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-task" class="icon">Task</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>Count</td>
+                                        <td>Hours</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div style="float:left;margin-right:50px;">
+                            <table>
+                                <caption>
+                                    <div id="icon-trophy" class="icon">Trophy</div>
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>Name</td>
+                                        <td>Count</td>
+                                        <td>Points</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Robin Zhu</td>
+                                        <td>10</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div style="margin-top: 85px">JUST FOR FUN</div>
+        </div>
+    </body>
+</html>
