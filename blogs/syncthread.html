@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/index.css"/>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="top-title">Keep Walking, Less Is More</div>
+        <div class="top-banner">
+            <span>博客</span>
+            <span>简书</span>
+        </div>
+        <div class="blog-container">
+            <h2>线程同步的一点收获</h2>
+            <p>
+                最近看了clr via c#里关于线程同步的几章，有几点感觉挺有帮助的：<br/>
+                1. 线程同步的方式区分为user mode和kernel mode<br/>
+                2. user mode的开销较小，但有占用cpu的缺陷<br/>
+                3. kernel mode功能强大，但性能太差<br/>
+                4. 混合模式取两者之优，最常用的lock就是用的混合模式的Moniter<br/>
+                5. lock关键词将Moniter.Exit放在了finally里面去执行，会导致异常情况下，锁被释放，有隐患
+            </p>
+        </div>
+    </body>
+</html>
