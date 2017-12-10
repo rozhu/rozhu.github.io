@@ -13,6 +13,13 @@ body {
     font-size:17px;
     line-height:25px;
     color: rgb(241,241,241);
+    padding-left: 15px;
+}
+
+.top-banner span {
+    margin-right: 5px;
+    cursor: pointer;
+    
 }
 
 .blog-container {
