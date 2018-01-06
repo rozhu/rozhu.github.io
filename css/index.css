@@ -10,16 +10,31 @@ body {
 .top-banner {
     width:100%;
     background-color: rgb(95, 95, 95);
-    font-size:17px;
-    line-height:25px;
     color: rgb(241,241,241);
-    padding-left: 15px;
+    height: 40px;
+    white-space: normal;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.top-banner span {
-    margin-right: 5px;
+.top-banner a {
+    padding: 10px 15px 10px 15px;
     cursor: pointer;
-    
+    font-size: 17px;
+    border: none;
+    outline: none;
+    float: left;
+    vertical-align: middle;
+}
+
+.top-banner a.active {
+    background-color: #4CAF50;
+}
+
+.top-banner a:hover{
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 .blog-container {
