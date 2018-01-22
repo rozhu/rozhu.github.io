@@ -26,14 +26,20 @@ body {
     outline: none;
     float: left;
     vertical-align: middle;
+    text-decoration: none;
+    color: #fff !important;
 }
 
 .top-banner a.active {
     background-color: #4CAF50;
 }
 
-.top-banner a:hover{
+.top-banner a:hover {
     background-color: #000 !important;
+    color: #fff !important;
+}
+
+.top-banner a:focus {
     color: #fff !important;
 }
 

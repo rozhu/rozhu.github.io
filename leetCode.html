@@ -3,57 +3,32 @@
     <header>
         <script>
         /**
-        * Definition for singly-linked list.
-        * function ListNode(val) {
-        *     this.val = val;
-        *     this.next = null;
-        * }
-        */
-        /**
-        * @param {ListNode} head
         * @param {number} n
-        * @return {ListNode}
+        * @return {string[]}
         */
-        var removeNthFromEnd = function(head, n) {
-            // Get the count of List.
-            var currentNode = head;
-            var count = 1;
-            while (currentNode.next)
-            {
-                currentNode = currentNode.next;
-                count++;
-            }
-
-            // Loop again.
-            var loop = count - n;
-            var myhead = new ListNode(0);
-            myhead.next = head;
-            var currentNode = myhead;
-            while (loop > 0)
-            {
-                currentNode = currentNode.next;
-                loop--;
-            }
-
-            currentNode.next = currentNode.next.next;
-            
+        var generateParenthesis = function(n) {
+            return generateParenthesisInternal(n);
         };
 
-        function ListNode(val) {
-            this.val = val;
-            this.next = null;
-        }
-
-        var currentNode = null;
-        for (var i = 0; i < 5; i++)
+        function generateParenthesisInternal(n)
         {
-            var node = new ListNode();
-            node.val = 5 - i;
-            node.next = currentNode;
-            nextNode = node;
-        }
+            if (n = 1)
+            {
+                return ["()"];
+            }
+            var list = generateParenthesis(n - 1);
+            var newList = [];
+            for (var i = 0; i < list.length; i++)
+            {
+                newList.push["(" + list[i] + ")"];
+                for (var j = 0; j <= list[i].length; j++)
+                {
+                    newList.push[list[i].slice(0,j) + "()" + list[i].slice(j)];
+                }
+            }
 
-        alert(removeNthFromEnd(currentNode, 4));
+            return newList;
+        }
         </script>
     </header>
 </html>

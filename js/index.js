@@ -3,4 +3,10 @@ $(function(){
     {
         window.location = "http://www.jianshu.com/u/22205c0c60c3";
     });
+
+    $(".linkToContainer").click(function()
+    {
+        $(".linkToContainer").removeClass("active");
+        $(this).addClass("active");
+    });
 });
