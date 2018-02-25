@@ -43,6 +43,10 @@ body {
     color: #fff !important;
 }
 
-.blog-container {
+.container {
     padding: 10px 0 0 10px;
+}
+
+.hidden {
+    display: none;
 }

@@ -8,5 +8,8 @@ $(function(){
     {
         $(".linkToContainer").removeClass("active");
         $(this).addClass("active");
+        var container = $(this).attr("data-container");
+        $(".container").addClass("hidden");
+        $("#" + container).removeClass("hidden");
     });
 });

@@ -3,32 +3,67 @@
     <header>
         <script>
         /**
-        * @param {number} n
-        * @return {string[]}
+        * Definition for singly-linked list.
+        * function ListNode(val) {
+        *     this.val = val;
+        *     this.next = null;
+        * }
         */
-        var generateParenthesis = function(n) {
-            return generateParenthesisInternal(n);
-        };
+        /**
+        * @param {ListNode} head
+        * @return {ListNode}
+        */
+        var swapPairs = function(head) {
+            var oddHead = head;
+            var currentOddNode = head;
+            var evenHead = head.next;
+            var currentEvenNode = head.next;
 
-        function generateParenthesisInternal(n)
-        {
-            if (n = 1)
+            var currentNode = head;
+
+            var i = 0;
+            while(currentNode)
             {
-                return ["()"];
-            }
-            var list = generateParenthesis(n - 1);
-            var newList = [];
-            for (var i = 0; i < list.length; i++)
-            {
-                newList.push["(" + list[i] + ")"];
-                for (var j = 0; j <= list[i].length; j++)
+                currentNode = currentNode.next;
+                if (i % 2 == 0)
                 {
-                    newList.push[list[i].slice(0,j) + "()" + list[i].slice(j)];
+                    currentOddNode.next = currentNode;
+                    currentOddNode = currentOddNode.next;
                 }
+                else
+                {
+                    currentEvenNode.next = currentNode;
+                    currentEvenNode = currentEvenNode.next;
+                }
+                
+                i++;
             }
+            
+            var dummyHead = new ListNode(0);
+            dummyHead.next = evenHead;
+            currentNode = evenHead;
+            evenHead = evenHead.next;
+            var i = 0;
+            while (evenHead != null || oddHead != null)
+            {
+                if (i % 2 == 0)
+                {
+                    currentNode.next = oddHead;
+                    currentNode = currentNode.next;
+                    oddHead = oddHead.next;
+                }
+                else
+                {
+                    currentNode.next = evenHead;
+                    currentNode = currentNode.next;
+                    evenHead = evenHead.next;
+                }
 
-            return newList;
-        }
+                i++;
+            }
+            
+            return dummyHead.next;
+        };
         </script>
     </header>
 </html>

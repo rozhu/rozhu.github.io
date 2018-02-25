@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--TODO-->
 <!--
-    0. adjust the home page
-        0.1. top-nav link container
     1. add javascript, css trial pages
     2. import the blog template
 -->
@@ -16,23 +14,25 @@
 <div>
     <div class="top-title">Keep Walking, Less Is More, Embrace Complex</div>
     <div class="top-banner">
-        <a class="linkToContainer active">Blog</a>
-        <a class="linkToContainer">HTML</a>
-        <a class="linkToContainer">CSS</a>
-        <a class="linkToContainer">JS</a>
+        <a class="linkToContainer active" data-container="blog-container">Blog</a>
+        <a class="linkToContainer" data-container="html-container">HTML</a>
+        <a class="linkToContainer" data-container="css-container">CSS</a>
+        <a class="linkToContainer" data-container="js-container">JS</a>
         <a id="jianshulink">JianShu</a>
     </div>
-    <div class="blog-container">
+    <div class="container" id="blog-container">
         <a href="blogs/syncthread.html">线程同步的一点收获</a>
     </div>
-    <div class="html-container">
-
+    <div class="container hidden" id="html-container">
+        <a>Fancy Tags</a>
     </div>
-    <div class="css-container">
-
+    <div class="container hidden" id="css-container">
+        <a>Bootstrap</a>
+        <a>SASS and LASS</a>
     </div>
-    <div class="js-container">
-
+    <div class="container hidden" id="js-container">
+        <a>AngularJS</a>
+        <a>React</a>
     </div>
 </div>
 <div>
