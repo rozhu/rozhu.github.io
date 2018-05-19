@@ -13,57 +13,52 @@
         * @param {ListNode} head
         * @return {ListNode}
         */
-        var swapPairs = function(head) {
-            var oddHead = head;
-            var currentOddNode = head;
-            var evenHead = head.next;
-            var currentEvenNode = head.next;
-
-            var currentNode = head;
-
-            var i = 0;
-            while(currentNode)
-            {
-                currentNode = currentNode.next;
-                if (i % 2 == 0)
+        var strStr = function(haystack, needle) {
+    if (!needle)
+        {
+            return 0;
+        }
+    
+    if (!haystack)
+        {
+            return -1;
+        }
+    
+    var lengthOfNeedle = needle.length;
+    var lengthOfHaystack = haystack.length;
+    
+    var indexOfEnd = lengthOfNeedle - 1;
+    do
+        {
+            if (indexOfEnd > lengthOfHaystack - 1)
                 {
-                    currentOddNode.next = currentNode;
-                    currentOddNode = currentOddNode.next;
+                    break;
                 }
-                else
-                {
-                    currentEvenNode.next = currentNode;
-                    currentEvenNode = currentEvenNode.next;
-                }
-                
-                i++;
-            }
             
-            var dummyHead = new ListNode(0);
-            dummyHead.next = evenHead;
-            currentNode = evenHead;
-            evenHead = evenHead.next;
-            var i = 0;
-            while (evenHead != null || oddHead != null)
-            {
-                if (i % 2 == 0)
+            var match = true;
+            for (var i = 0; i < lengthOfNeedle; i++)
                 {
-                    currentNode.next = oddHead;
-                    currentNode = currentNode.next;
-                    oddHead = oddHead.next;
+                    if (needle[lengthOfNeedle - i - 1] != haystack[indexOfEnd])
+                        {
+                            match = false;
+                            break;
+                        }
                 }
-                else
+            if (match)
                 {
-                    currentNode.next = evenHead;
-                    currentNode = currentNode.next;
-                    evenHead = evenHead.next;
+                    return indexOfEnd - lengthOfNeedle;
                 }
-
-                i++;
-            }
+            else
+                {
+                    indexOfEnd++;
+                }
             
-            return dummyHead.next;
-        };
+        }while (true)
+    
+    return -1;
+};
+
+strStr("hello", "ll");
         </script>
     </header>
 </html>
