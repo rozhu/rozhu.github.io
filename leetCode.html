@@ -2,63 +2,50 @@
 <html>
     <header>
         <script>
-        /**
-        * Definition for singly-linked list.
-        * function ListNode(val) {
-        *     this.val = val;
-        *     this.next = null;
-        * }
-        */
-        /**
-        * @param {ListNode} head
-        * @return {ListNode}
-        */
-        var strStr = function(haystack, needle) {
-    if (!needle)
-        {
-            return 0;
-        }
-    
-    if (!haystack)
-        {
-            return -1;
-        }
-    
-    var lengthOfNeedle = needle.length;
-    var lengthOfHaystack = haystack.length;
-    
-    var indexOfEnd = lengthOfNeedle - 1;
-    do
-        {
-            if (indexOfEnd > lengthOfHaystack - 1)
+        var nextPermutation = function(nums) {
+            var isBiggest = true;
+            for (var i = nums.length-2; i > 0; i--)
+            {
+                if (nums[i]> nums[i+1])
                 {
-                    break;
+                    continue;
                 }
-            
-            var match = true;
-            for (var i = 0; i < lengthOfNeedle; i++)
+                else
                 {
-                    if (needle[lengthOfNeedle - i - 1] != haystack[indexOfEnd])
+                    var temp = nums[i];
+                    nums[i] = nums[nums.length-1];
+                    nums[nums.length-1] = temp;
+                    var length = nums.length-1 -i-1;
+                    for (var j = i +1; j < nums.length-2; j++)
+                    {
+                        if (j < nums.length - 2 - j)
                         {
-                            match = false;
+                            var temp = nums[j];
+                            nums[j] = nums[nums.length -2 - j];
+                            nums[nums.length-2-j] = nums[j];
+                        }
+                    }
+                    for (var j = i + 1; j < nums.length-2; j++)
+                    {
+                        if (nums[nums.length-1]<nums[j])
+                        {
+                            var temp = nums[nums.length-1];
+                            for (var k=0; k < nums.length-2-j; k++)
+                            {
+                                nums[nums.length - 1 -k] = nums[nums.length - 1 - k -1];
+                            }
+                            nums[j] = temp;
                             break;
                         }
+                    }
                 }
-            if (match)
-                {
-                    return indexOfEnd - lengthOfNeedle;
-                }
-            else
-                {
-                    indexOfEnd++;
-                }
-            
-        }while (true)
-    
-    return -1;
-};
+            }
 
-strStr("hello", "ll");
+            if (isBiggest)
+            {
+                nums.sort(function(a, b) {return a-b});
+            }
+        };
         </script>
     </header>
 </html>
